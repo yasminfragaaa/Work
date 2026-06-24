@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 
 class Menu:
-    def __init__(self):
-        self.title = None
+    def __init__(self,window):
+        self.title = window
 
     def show(self, ):
         pass

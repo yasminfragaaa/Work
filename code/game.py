@@ -1,39 +1,46 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-from Game import Game
-from Game import Game
-from Game import Game
-from Game import Game
-from Player import Player
-from Coin import Coin
-from Enemy import Enemy
+import pygame
+
+from code.menu import Menu
 
 
-class Game(Game, Game, Game, Game, Player, Coin, Enemy):
+class Game:
     def __init__(self):
-        self.screen_width = None
-        self.screen_height = None
-        self.score = None
-        self.running = None
-        self.coins = None
-        self.enemies = None
+        self.screen_width = 800
+        self.screen_height = 600
+        self.score = 0
+        self.running = True
+        self.coins = []
+        self.enemies = []
         self.player = None
         self.menu = None
+        pygame.init()
+        self.window = pygame.display.set_mode(size=(600, 400))
 
-    def start(self, ):
+    def start(self):
+
+        while True:
+            menu = Menu(self.window)
+            menu.show()
+            pass
+            # Check for all events
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    pygame.quit()  # Close Window
+                    quit()  # end pygame
+
+    def update(self,):
         pass
 
-    def update(self, ):
+    def draw(self,):
         pass
 
-    def draw(self, ):
+    def check_collision(self,):
         pass
 
-    def check_collision(self, ):
-        pass
-
-    def check_win(self, ):
+    def check_win(self,):
         pass
 
     def check_lose(self, ):
