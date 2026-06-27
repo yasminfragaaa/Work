@@ -9,7 +9,7 @@ from pygame.font import Font
 class Menu:
     def __init__(self,window):
         self.window = window
-        self.surf = pygame.image.load('./asset/sky.png')
+        self.surf = pygame.image.load('./asset/menusky.png')
         self.surf = pygame.transform.scale(self.surf, (600,400))
         self.rect = self.surf.get_rect(left=0, top = 0)
 
