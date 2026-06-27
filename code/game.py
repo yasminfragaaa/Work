@@ -20,16 +20,13 @@ class Game:
         self.window = pygame.display.set_mode(size=(600, 400))
 
     def start(self):
+        menu = Menu(self.window)
+        menu.show()
 
-        while True:
-            menu = Menu(self.window)
-            menu.show()
-            pass
-            # Check for all events
-            for event in pygame.event.get():
-                if event.type == pygame.QUIT:
-                    pygame.quit()  # Close Window
-                    quit()  # end pygame
+        while self.running:
+            self.update()
+            self.draw()
+
 
     def update(self,):
         pass
